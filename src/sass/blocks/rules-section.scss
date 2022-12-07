@@ -1,0 +1,28 @@
+.rules-section {
+    padding: 4rem 0 1rem;
+    background-color: $white;
+    background-image: url("../images/last-section.svg");
+    background-position: center 15%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    @media (min-width: 768px) {
+        padding: 8.4rem 0 4.9rem;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+    .abs-img {
+        position: absolute;
+        top: -10rem;
+        left: 0;
+        @media (min-width: 1200px) {
+            top: -14rem;
+        }
+    }
+    .base-text {
+        max-width: 56rem;
+    }
+}

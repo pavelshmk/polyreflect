@@ -1,0 +1,18 @@
+.yield-section {
+    padding: 4rem 0 1rem;
+    background-image: url("../images/sectio-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (min-width: 768px) {
+        padding: 8.4rem 0 4.9rem;
+    }
+
+    .section-title,
+    .base-text {
+        color: $white;
+    }
+    .base-text {
+        max-width: 52rem;
+    }
+}

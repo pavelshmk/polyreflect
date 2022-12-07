@@ -1,0 +1,168 @@
+@import "help/variables";
+
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  padding: 2.6rem 0 3rem;
+
+  &_lk {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    background-color: $primary-text;
+    box-shadow: 0px 4px 100px #8247e5;
+    padding: 0.9rem 0;
+
+    div.container {
+      max-width: 100%;
+    }
+
+    .burger {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .logo {
+    width: 12rem;
+    flex: none;
+    margin-right: 2rem;
+    @media (min-width: 768px) {
+      width: 16rem;
+    }
+    @media (min-width: 1360px) {
+      width: 19.8rem;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .container {
+    max-width: 1170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (min-width: 768px) {
+      padding: 0 3rem;
+      align-items: center;
+    }
+  }
+}
+
+.nav {
+  position: fixed;
+  background-color: $black;
+  transition: $base-transition;
+  z-index: 1;
+  top: 0;
+  right: -100vw;
+  height: 100vh;
+  width: 100vw;
+  padding: 3rem;
+  @media (min-width: 900px) {
+    background-color: transparent;
+    position: absolute;
+    width: auto;
+    right: auto;
+    top: 50%;
+    padding: 0;
+    height: auto;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+  @media (min-width: 1200px) {
+    left: 50%;
+  }
+
+  &.active {
+    right: 0;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 900px) {
+      flex-direction: row;
+    }
+  }
+
+  li {
+    margin-bottom: 3rem;
+    @media (min-width: 900px) {
+      margin-bottom: 0;
+      margin-right: 2.5rem;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    color: $white;
+    font-size: 2rem;
+    line-height: 1.47;
+    font-weight: 350;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-bottom: 1px solid $white;
+    }
+  }
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  margin-left: 1rem;
+  @media (min-width: 900px) {
+    display: none;
+  }
+
+  &.active {
+    span {
+      background-color: $white;
+
+      &:nth-child(1) {
+        top: 7px;
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: translateX(2000px);
+      }
+
+      &:nth-child(3) {
+        bottom: 7px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  span {
+    width: 30px;
+    height: 2px;
+    border-radius: 100px;
+    position: relative;
+    transition: $base-transition;
+    background-color: $white;
+
+    &:nth-child(1) {
+      margin-bottom: 5px;
+    }
+
+    &:nth-child(3) {
+      margin-top: 5px;
+    }
+  }
+}

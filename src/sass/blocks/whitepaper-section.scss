@@ -1,0 +1,292 @@
+.whitepaper-section {
+    padding: 0 0 5rem;
+    background-image: linear-gradient(180deg, #0f0c16 0%, #150236 100%);
+    @media (min-width: 768px) {
+        padding: 0 0 10rem;
+    }
+}
+
+.loader-section {
+    height: 100vh;
+    background-color: $black;
+    background-image: url("../images/pattern.svg");
+    background-position: center;
+    background-size: contain;
+}
+
+.loader {
+    margin: 0 auto;
+    transform: rotate(0deg);
+    animation: loader 1s ease 0s infinite;
+    img {
+        display: block;
+    }
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.whitepaper-wrap {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+    @media (min-width: 768px) {
+        margin-bottom: 9rem;
+    }
+    .whitepaper-img {
+        margin-bottom: 2rem;
+        @media (min-width: 768px) {
+            margin-bottom: 4.8rem;
+        }
+    }
+    .whitepaper-title {
+        font-weight: 800;
+        font-size: 2.8rem;
+        text-align: center;
+        color: $white;
+        margin-bottom: 2.4rem;
+    }
+    .whitepaper-text {
+        font-size: 2.4rem;
+        text-align: center;
+        color: $white;
+        margin-bottom: 5px;
+    }
+    .whitepaper-name {
+        font-weight: 800;
+        font-size: 5rem;
+        text-align: center;
+        color: #8248e5;
+    }
+    .whitepaper-copyright {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        font-size: 2.4rem;
+        color: $white;
+        transform: translateX(-50%);
+    }
+}
+
+.whitepaper-item {
+    color: $white;
+    font-size: 3.2rem;
+    margin-bottom: 5px;
+}
+
+.whitepaper-list {
+    margin-bottom: 6rem;
+    & > li > a > span {
+        font-weight: 800;
+    }
+    & > li > a {
+        font-weight: 800;
+    }
+    span {
+        color: $white;
+        font-size: 2.4rem;
+        margin-right: 3px;
+    }
+    a {
+        display: block;
+        margin-bottom: 5px;
+        color: #8248e5;
+        font-size: 2.4rem;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.typography {
+    h2 {
+        font-size: 4.4rem;
+        font-weight: 800;
+        color: $white;
+        margin-bottom: 1.5rem;
+        margin-top: 6rem;
+    }
+    h3 {
+        font-size: 2.4rem;
+        font-weight: 800;
+        color: $white;
+        margin-bottom: 2rem;
+        margin-top: 4rem;
+    }
+    p {
+        font-size: 2.4rem;
+        color: $white;
+        margin-bottom: 3rem;
+        line-height: 1.4;
+        font-weight: 300;
+    }
+
+    span {
+        font-size: 2.4rem;
+        color: $white;
+        line-height: 1.4;
+        display: block;
+        font-weight: 300;
+    }
+
+    a {
+        font-size: 2.4rem;
+        color: #8248e5;
+        font-weight: 800;
+        line-height: 1.4;
+        margin: 0 5px;
+        word-break: break-word;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    strong {
+        font-weight: 800;
+    }
+
+    .uniswap {
+        color: #0bd5e7;
+        font-weight: 800;
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        &:hover {
+            .tooltip {
+                opacity: 1;
+                z-index: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .tooltip {
+        opacity: 0;
+        z-index: -1;
+        visibility: hidden;
+        position: absolute;
+        top: -10rem;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 4rem 4rem 5.5rem;
+        font-size: 14px;
+        line-height: 1.4;
+        width: 42rem;
+        transition: all 0.3s ease;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url("../images/tooltip-bg.svg");
+    }
+
+    .code-blok {
+        background: rgba(130, 72, 229, 0.1);
+        border: 1px solid #8248e5;
+        border-radius: 3px;
+        padding: 0 3px;
+        margin: 0 5px 0 0;
+        display: inline-block;
+        &.one-block {
+            padding: 2rem 2.5rem;
+            @media (min-width: 768px) {
+                margin-left: 6.5rem;
+            }
+        }
+        & > * {
+            font-size: 2rem;
+        }
+    }
+
+    .block-text {
+        margin-bottom: 3rem;
+    }
+}
+
+.chart-wrap {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .chart {
+        overflow: hidden;
+        position: relative;
+        width: 80vw;
+        height: 80vw;
+        background-color: transparent;
+        background-color: #004586;
+        border-radius: 50%;
+        margin-bottom: 3rem;
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+            width: 300px;
+            height: 300px;
+            margin-right: 5rem;
+        }
+    }
+    .chart-item {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 80vw;
+        height: 80vw;
+        @media (min-width: 768px) {
+            width: 300px;
+            height: 300px;
+        }
+
+        &:nth-child(1) {
+            background-color: #ffd320;
+            clip-path: polygon(45% 100%, 75% 100%, 50% 50%);
+            transform: rotate(-120deg);
+        }
+
+        &:nth-child(2) {
+            background-color: #ff420e;
+            clip-path: polygon(-100% 100%, 300% 100%, 50% 50%);
+            transform: rotate(-38deg);
+        }
+    }
+
+    .chart-color {
+        width: 15px;
+        height: 15px;
+        margin-right: 1rem;
+        position: relative;
+        top: -2px;
+        &.liquidity {
+            background-color: #004586;
+        }
+        &.sale {
+            background-color: #ffd320;
+        }
+        &.team {
+            background-color: #ff420e;
+        }
+    }
+
+    .chart-text {
+        font-size: 2rem;
+        color: $white;
+        line-height: 1;
+    }
+
+    .chart-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+}

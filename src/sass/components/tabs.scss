@@ -1,0 +1,51 @@
+.tabs {
+  position: relative;
+  &__nav-wrap {
+    background-color: $tabs;
+    border-radius: 100px;
+    min-width: 12.65rem;
+    width: fit-content;
+  }
+  
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn {
+    color: $btn-bg;
+    transition: $base-transition;
+    padding: 0.4rem 1rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.3;
+    cursor: pointer;
+    white-space: nowrap;
+    width: fit-content;
+    &.active {
+      color: $tabs;
+      background-color: $btn-bg;
+      border-radius: 100px;
+    }
+  }
+
+  &__content {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__nocontent {
+    font-weight: 350;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px;
+  }
+}
